@@ -6,7 +6,6 @@ import { CreateContexts } from "contexts";
 export const ProductListing: React.FC = () => {
   const { products } = React.useContext(CreateContexts);
 
- 
   return (
     <React.Fragment> 
       <Main>
