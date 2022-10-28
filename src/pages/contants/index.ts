@@ -1,0 +1,1 @@
+export { PagesConstantsRoutes } from "./routes";
