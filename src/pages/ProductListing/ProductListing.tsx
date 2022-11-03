@@ -2,9 +2,18 @@ import React from "react";
 import { Main } from "./ProductListing.styles";
 import { Product } from "components/Product";
 import { CreateContexts } from "contexts";
+import { api } from "utils/api";
 
 export const ProductListing: React.FC = () => {
-  const { products } = React.useContext(CreateContexts);
+  const { products,setProducts } = React.useContext(CreateContexts);
+
+  React.useEffect(() => {
+    const fetchProducts = async () => {
+      const result = await api.get("/products");
+      setProducts(result.data);
+    };
+    fetchProducts();
+  }, [setProducts]);
 
   return (
     <React.Fragment> 
@@ -22,4 +31,4 @@ export const ProductListing: React.FC = () => {
       </Main>
     </React.Fragment>
   );
-};
+}; 

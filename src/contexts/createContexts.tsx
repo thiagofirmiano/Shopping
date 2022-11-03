@@ -7,6 +7,7 @@ interface CartContextDescription {
   setProducts: React.Dispatch<React.SetStateAction<ProductGetDescription []>>;
   getProduct: (id: number) => ProductGetDescription  | undefined;
   getItemsQuantity: () => number;
+  addToCart: (product: ProductGetDescription) => void;
    
 }
 
@@ -18,11 +19,23 @@ export const CreateContexts = React.createContext<CartContextDescription >({} as
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [products, setProducts] = React.useState<ProductGetDescription []>([]);
-  const [cart] = React.useState<ProductCartDescription[]>([]);
+  const [cart, setCart] = React.useState<ProductCartDescription[]>([]);
 
-  const getProduct = (id: number) => {
-    return products.find(product => product.id === id);
-  };
+  const getProduct = (id: number) =>
+  products.find(product => product.id === id);
+const addToCart = (product: ProductGetDescription) => {
+  const cartList = [...cart];
+  const isInCart = cartList.some(item => item.id === product.id);
+  if (isInCart) return;
+  cartList.push({
+    id: product.id,
+    title: product.title,
+    image: product.image,
+    price: product.price,
+    count: 1,
+  });
+  setCart(cartList);
+};
   const getItemsQuantity = () =>
     cart.reduce((total, product) => total + product.count, 0); 
     
@@ -33,7 +46,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       setProducts,
       getProduct,
       getItemsQuantity,
-      
+      addToCart,
     
     }}>
       {children}

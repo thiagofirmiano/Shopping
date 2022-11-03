@@ -1,6 +1,8 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
 import {CardWrapper,Image,Description,Footer,Price,Title,} from "./Product.styles";
+import { useNavigate } from "react-router-dom";
+import { CreateContexts } from "contexts";
 
 interface ProductCardProps {
   id: number; 
@@ -17,12 +19,14 @@ export const Product: React.FC<ProductCardProps> = ({
   price,
   id,
 }) => {
+  
+  const navigate = useNavigate();
+  const { addToCart } = React.useContext(CreateContexts);
 
-  const onProductClick = () => {
-  };
+  const onProductClick = () => navigate(`/products/${id}`);
 
   const onAddToCartClick = () => {
-    addCart({
+    addToCart({
       id,
       title,
       image,
@@ -59,8 +63,4 @@ export const Product: React.FC<ProductCardProps> = ({
   );
 };
 
-
-function addCart(arg0: { id: number; title: string; image: string; price: number; }) {
-  throw new Error("Function not implemented.");
-}
 

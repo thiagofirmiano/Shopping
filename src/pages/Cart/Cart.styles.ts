@@ -20,6 +20,10 @@ export const CartText = styled(Typography)({
 export const CartContent = styled("section")({
   display: "flex",
   gap: "1vw",
+  "@media only screen and (max-width: 580px)": {
+    flexDirection: "column",
+    alignItems: "center",
+  },
 });
 
 export const CartProducts = styled("div")({
@@ -28,6 +32,15 @@ export const CartProducts = styled("div")({
   flexDirection: "column",
   gap: 10,
   marginBottom: 20,
+  "@media only screen and (max-width: 580px)": {
+    width: "80vw",
+  },
+  "@media only screen and (max-width: 365px)": {
+    width: "90vw",
+  },
+  "@media only screen and (max-width: 320px)": {
+    width: "94vw",
+  },
 });
 
 export const CartSummary = styled("div")({
@@ -37,7 +50,31 @@ export const CartSummary = styled("div")({
   height: "40vh",
   backgroundColor: "#FFFFFF",
   position: "relative",
-
+  "@media only screen and (max-width: 730px)": {
+    "&": {
+      width: "30vw",
+    },
+    "& p": {
+      fontSize: 18,
+    },
+  },
+  "@media only screen and (max-width: 600px)": {
+    "&": {
+      height: "50vw",
+    },
+    "& button": {
+      fontSize: 10,
+      height: 25,
+    },
+  },
+  "@media only screen and (max-width: 580px)": {
+    width: "80vw",
+  },
+  "@media only screen and (max-width: 320px)": {
+    "& p": {
+      fontSize: 14,
+    },
+  },
 });
 
 export const SummaryItem = styled("div")({
@@ -45,7 +82,23 @@ export const SummaryItem = styled("div")({
   alignItems: "center",
   padding: "0 20px",
   justifyContent: "space-between",
-  
+  "&:nth-child(3)": {
+    marginTop: 50,
+  },
+  "@media only screen and (max-width: 600px)": {
+    flexDirection: "column",
+    "&:nth-child(3)": {
+      marginTop: 0,
+    },
+  },
+  "@media only screen and (max-width: 580px)": {
+    flexDirection: "row",
+  },
+  "@media only screen and (max-width: 320px)": {
+    "& p": {
+      lineHeight: "25px",
+    },
+  },
 });
 
 export const SummaryLabel = styled(Typography)({
