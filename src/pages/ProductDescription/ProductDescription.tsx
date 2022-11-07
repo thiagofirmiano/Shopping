@@ -6,6 +6,8 @@ import { ProductGetDescription  } from "utils/auxiliaryFunction";
 import { CreateContexts } from "contexts";
 import { useLocation, useNavigate } from "react-router-dom";
 import { PagesConstantsRoutes } from "pages/contants";
+import { Footer } from "components/Footer";
+import { Header } from "components/Header";
 
 export const ProductDescription: React.FC = () => {
   const [product, setProduct] = React.useState<ProductGetDescription | undefined>({} as ProductGetDescription);
@@ -28,7 +30,8 @@ export const ProductDescription: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Main> 
+      <Header />
+      <Main>
         <Image src={product?.image} alt={product?.title} />
         <DescriptionWrapper>
           <Title>
@@ -49,6 +52,7 @@ export const ProductDescription: React.FC = () => {
           </AddButton>
         </Aside>
       </Main>
+      <Footer />
     </React.Fragment>
   );
 };

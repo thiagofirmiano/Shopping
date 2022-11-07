@@ -3,6 +3,8 @@ import { Main } from "./ProductListing.styles";
 import { Product } from "components/Product";
 import { CreateContexts } from "contexts";
 import { api } from "utils/api";
+import { Header } from "components/Header";
+import { Footer } from "components/Footer";
 
 export const ProductListing: React.FC = () => {
   const { products,setProducts } = React.useContext(CreateContexts);
@@ -16,7 +18,8 @@ export const ProductListing: React.FC = () => {
   }, [setProducts]);
 
   return (
-    <React.Fragment> 
+    <React.Fragment>
+      <Header /> 
       <Main>
       {products.map(product => 
           <Product
@@ -29,6 +32,7 @@ export const ProductListing: React.FC = () => {
           />  
         )}
       </Main>
+      <Footer />
     </React.Fragment>
   );
 }; 

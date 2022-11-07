@@ -1,4 +1,6 @@
 import { ComponentsCard } from "components/ComponentsCard";
+import { Footer } from "components/Footer";
+import { Header } from "components/Header";
 import { CreateContexts } from "contexts";
 import React from "react";
 import {BuyButton,CartContent, CartProducts,CartSummary,CartText,Main,SummaryItem,SummaryLabel,SummaryValue,} from "./Cart.styles";
@@ -8,6 +10,7 @@ export const Cart: React.FC = () => {
 
   return (   
     <React.Fragment>
+      <Header />
       <Main>
         <CartText>Your cart</CartText>
 
@@ -40,6 +43,7 @@ export const Cart: React.FC = () => {
           </CartSummary>
         </CartContent>
       </Main>
+      <Footer />
     </React.Fragment>
   );
 }; 
