@@ -1,6 +1,6 @@
 export enum PagesConstantsRoutes {
   productListing = "/",
-  productDescription = "/product-Description",
+  productDescription = "/product-Description/:id",
   cart = "/cart",
-  products = "products"
+  products = "products" 
 } 

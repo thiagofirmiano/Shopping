@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const CardWrapper = styled("div")({
-  height: 100,
+  height: 90,
   borderRadius: 5,
   display: "flex",
   alignItems: "center",
@@ -14,18 +14,18 @@ export const ProductData = styled("div")({
   display: "flex",
   alignItems: "center",
   padding: "0 10px",
-  gap: 10,
+  gap: 9,
 });
 
 export const Image = styled("img")({
-  height: 60,
-  width: 60,
+  height: 58,
+  width: 58,
   cursor: "pointer",
 });
 
 export const Title = styled(Typography)({
-  fontSize: 18,
-  fontWeight: 700,
+  fontSize: 17,
+  fontWeight: 600,
   cursor: "pointer",
   transition: "all .2s",
   "&:hover": {
@@ -60,7 +60,7 @@ export const Units = styled(Typography)({
 
 export const Price = styled(Typography)({
   fontStyle: "italic",
-  fontWeight: 500,
+  fontWeight: 400,
   "@media only screen and (max-width: 840px)": {
     "&": {
       fontSize: 12,
@@ -71,8 +71,8 @@ export const Price = styled(Typography)({
 export const ProductActions = styled("div")({
   display: "flex",
   alignItems: "center",
-  gap: 10,
-  paddingRight: 10,
+  gap: 9,
+  paddingRight: 9,
   "& > div": {
     display: "flex",
     flexDirection: "column",

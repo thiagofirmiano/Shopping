@@ -10,8 +10,8 @@ export const Main = styled("main")({
 });
 
 export const CartText = styled(Typography)({
-  fontSize: 26,
-  fontWeight: 600,
+  fontSize: 20,
+  fontWeight: 500,
   lineHeight: "39px",
   letterSpacing: 0,
   color: "#353545",
@@ -20,27 +20,14 @@ export const CartText = styled(Typography)({
 export const CartContent = styled("section")({
   display: "flex",
   gap: "1vw",
-  "@media only screen and (max-width: 580px)": {
-    flexDirection: "column",
-    alignItems: "center",
-  },
 });
 
 export const CartProducts = styled("div")({
-  width: "50vw",
+  width: "45vw",
   display: "flex",
   flexDirection: "column",
   gap: 10,
   marginBottom: 20,
-  "@media only screen and (max-width: 580px)": {
-    width: "80vw",
-  },
-  "@media only screen and (max-width: 365px)": {
-    width: "90vw",
-  },
-  "@media only screen and (max-width: 320px)": {
-    width: "94vw",
-  },
 });
 
 export const CartSummary = styled("div")({
@@ -50,33 +37,11 @@ export const CartSummary = styled("div")({
   height: "40vh",
   backgroundColor: "#FFFFFF",
   position: "relative",
-  "@media only screen and (max-width: 730px)": {
-    "&": {
-      width: "30vw",
-    },
-    "& p": {
-      fontSize: 18,
-    },
-  },
-  "@media only screen and (max-width: 600px)": {
-    "&": {
-      height: "50vw",
-    },
     "& button": {
       fontSize: 10,
       height: 25,
     },
-  },
-  "@media only screen and (max-width: 580px)": {
-    width: "80vw",
-  },
-  "@media only screen and (max-width: 320px)": {
-    "& p": {
-      fontSize: 14,
-    },
-  },
 });
-
 export const SummaryItem = styled("div")({
   display: "flex",
   alignItems: "center",
@@ -84,20 +49,6 @@ export const SummaryItem = styled("div")({
   justifyContent: "space-between",
   "&:nth-child(3)": {
     marginTop: 50,
-  },
-  "@media only screen and (max-width: 600px)": {
-    flexDirection: "column",
-    "&:nth-child(3)": {
-      marginTop: 0,
-    },
-  },
-  "@media only screen and (max-width: 580px)": {
-    flexDirection: "row",
-  },
-  "@media only screen and (max-width: 320px)": {
-    "& p": {
-      lineHeight: "25px",
-    },
   },
 });
 
@@ -111,8 +62,8 @@ export const SummaryLabel = styled(Typography)({
 });
 
 export const SummaryValue = styled(Typography)({
-  fontWeight: 600,
-  fontSize: 26,
+  fontWeight: 500,
+  fontSize: 24,
   lineHeight: "39px",
   letterSpacing: 0,
   textAlign: "left",
@@ -121,7 +72,7 @@ export const SummaryValue = styled(Typography)({
 
 export const BuyButton = styled(Button)({
   width: "100%",
-  height: 40,
+  height: 35,
   position: "absolute",
   bottom: 0,
 });

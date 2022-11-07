@@ -1,7 +1,7 @@
 import { Button, styled, Typography } from "@mui/material";
 
 export const Main = styled("main")({
-  marginTop: 120,
+  marginTop: 100,
   minHeight: "calc(100vh - 180px)",
   display: "flex",
   gap: "1vw",
@@ -29,7 +29,7 @@ export const DescriptionWrapper = styled("div")({
   width: "40vw",
   height: "fit-content",
   backgroundColor: "#FFFFFF",
-  padding: 20,
+  padding: 18,
   borderRadius: 5,
   "@media only screen and (max-width: 660px)": {
     "&": {
@@ -51,14 +51,14 @@ export const Title = styled(Typography)({
 });
 
 export const Rating = styled(Typography)({
-  fontSize: 18,
+  fontSize: 15,
   fontStyle: "italic",
   color: "#555",
 });
 
 export const Description = styled(Typography)({
-  marginTop: 10,
-  fontSize: 18,
+  marginTop: 12,
+  fontSize: 17,
   color: "#222",
   textAlign: "justify",
   textIndent: 50,
@@ -83,8 +83,8 @@ export const Aside = styled("div")({
 
 export const Price = styled(Typography)({
   textAlign: "center",
-  fontSize: 26,
-  fontWeight: 700,
+  fontSize: 24,
+  fontWeight: 600,
   color: "#1976D2",
   display: "flex",
   flexDirection: "column",
@@ -95,5 +95,5 @@ export const Price = styled(Typography)({
 });
 
 export const AddButton = styled(Button)({
-  marginTop: 10,
+  marginTop: 8,
 });

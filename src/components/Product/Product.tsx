@@ -23,7 +23,7 @@ export const Product: React.FC<ProductCardProps> = ({
   const navigate = useNavigate();
   const { addToCart } = React.useContext(CreateContexts);
 
-  const onProductClick = () => navigate(`/products/${id}`);
+  const onProductClick = () => navigate(`/product-Description/${id}`);
 
   const onAddToCartClick = () => {
     addToCart({
