@@ -45,7 +45,7 @@ export const ComponentsCard : React.FC<ProductCartDescription > = ({
           <Button onClick={ArrouDownButtonClick}>
           </Button>
         </Box>
-        <DeleteIcon
+        <DeleteIcon 
           onClick={DeleteButtonClick}
           src={TrashCan}
           alt="Trash can icon"

@@ -32,7 +32,7 @@ export const ProductListing: React.FC = () => {
           />  
         )}
       </Main>
-      <Footer />
+      <Footer /> 
     </React.Fragment>
   );
 }; 

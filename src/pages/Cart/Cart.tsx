@@ -43,7 +43,7 @@ export const Cart: React.FC = () => {
           </CartSummary>
         </CartContent>
       </Main>
-      <Footer />
+      <Footer /> 
     </React.Fragment>
   );
 }; 

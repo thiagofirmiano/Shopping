@@ -9,4 +9,4 @@ export const App: React.FC = () => (
       <Router /> 
     </CartProvider>
   </ContantWrapper>
-);
+); 

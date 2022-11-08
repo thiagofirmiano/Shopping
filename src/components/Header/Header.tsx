@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
         <NavLink to={PagesConstantsRoutes.cart}>
           <img src={ShoppingCart} alt="Shopping cart" />
           {itemsQuantity}
-        </NavLink>
+        </NavLink> 
 
         <UserAvatar
           src="https://avatars.githubusercontent.com/u/73958393?v=4"
