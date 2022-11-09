@@ -15,7 +15,7 @@ export const ProductListing: React.FC = () => {
       setProducts(result.data);
     };
     fetchProducts();
-  }, [setProducts]);
+  }, [setProducts]); 
 
   return (
     <React.Fragment>

@@ -4,6 +4,7 @@ import React from "react";
 import {CardWrapper,DeleteIcon,Description,Image,Price,ProductActions,ProductData,Title,Units,} from "./ComponentsCard.styles";
 import TrashCan from "assets/icons/TrashCan.svg";
 import { CreateContexts } from "contexts";
+import { useNavigate } from "react-router-dom";
 
 
 export const ComponentsCard : React.FC<ProductCartDescription > = ({
@@ -13,15 +14,17 @@ export const ComponentsCard : React.FC<ProductCartDescription > = ({
   price,
   count,
 }) => {
-    React.useContext(CreateContexts);
+  const navigate = useNavigate();
+  const { aumentarCart, diminuirCart, removeCart } = React.useContext(CreateContexts);
 
-  const ArrouUpButtonClick = () =>{}
-    
-  const ArrouDownButtonClick = () =>{}
-    
-  const DeleteButtonClick = () =>{}
-    
-  const ProductItemClick = () =>{}
+  const UpButtonClick = () =>
+    aumentarCart(id);
+  const DownButtonClick = () =>
+    diminuirCart(id);
+  const DeleteButtonClick = () =>
+    removeCart(id);
+  const ProductItemClick = () =>
+    navigate(`/products/${id}`);
     
 
   return (
@@ -40,9 +43,9 @@ export const ComponentsCard : React.FC<ProductCartDescription > = ({
       </ProductData>
       <ProductActions>
         <Box>
-          <Button onClick={ArrouUpButtonClick}>
+          <Button onClick={UpButtonClick}>
           </Button>
-          <Button onClick={ArrouDownButtonClick}>
+          <Button onClick={DownButtonClick}>
           </Button>
         </Box>
         <DeleteIcon 

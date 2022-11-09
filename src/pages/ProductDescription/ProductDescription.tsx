@@ -1,7 +1,7 @@
 import { Divider } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { AddButton, Aside, Description, DescriptionWrapper, Image, Main, Price, Title } from "./ProductDescription.styles";
+import { AddButton, AparteAside, Description, OnDescriptionWrapper, Img, PrincipalMain, Price, TitleText,Rating } from "./ProductDescription.styles";
 import { ProductGetDescription  } from "utils/auxiliaryFunction";
 import { CreateContexts } from "contexts";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ import { PagesConstantsRoutes } from "pages/contants";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 
-export const ProductDescription: React.FC = () => {
+export const ProductDescription: React.FC = () => { 
   const [product, setProduct] = React.useState<ProductGetDescription | undefined>({} as ProductGetDescription);
 
   const { getProduct, addToCart } = React.useContext(CreateContexts);
@@ -28,30 +28,31 @@ export const ProductDescription: React.FC = () => {
     setProduct(prod);
   }, [getProduct, location, navigate]);
 
-  return (
+  return ( 
     <React.Fragment>
       <Header />
-      <Main>
-        <Image src={product?.image} alt={product?.title} />
-        <DescriptionWrapper>
-          <Title>
+      <PrincipalMain>
+        <Img src={product?.image} alt={product?.title} />
+        <OnDescriptionWrapper>
+          <TitleText>
             {product?.title}
-          </Title>
+          </TitleText>
+          <Rating>Rating: {product?.rating?.rate}</Rating>
           <Divider />
           <Description>
             {product?.description}
           </Description>
-        </DescriptionWrapper>
-        <Aside>
+        </OnDescriptionWrapper>
+        <AparteAside>
           <Price>
-            <Box component="span">Now, for only:</Box>
+            <Box component="span">Aproveite, por apenas:</Box>
             U$ {product?.price?.toFixed(2)}
           </Price>
           <AddButton variant="contained" onClick={onAddToCartButtonClick}>
-            Add to cart
+            Add no carrinho
           </AddButton>
-        </Aside>
-      </Main>
+        </AparteAside>
+      </PrincipalMain>
       <Footer />
     </React.Fragment>
   );

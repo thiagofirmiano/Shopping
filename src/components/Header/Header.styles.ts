@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const HeaderWrapper = styled("header")({
   width: "100%",
-  height: 90,
+  height: 100,
   backgroundColor: "#FFF",
   padding: "0 50px",
   display: "flex",
@@ -26,12 +26,12 @@ export const HeaderWrapper = styled("header")({
       fontSize: 20,
     },
     "& img": {
-      width: 18,
-      height: 18,
+      width: 20,
+      height: 20,
     },
     "& img[alt='user avatar']": {
-      width: 30,
-      height: 30,
+      width: 35,
+      height: 35,
     },
   },
   "@media only screen and (max-width: 380px)": {
@@ -57,14 +57,25 @@ export const NavLink = styled(Link)({
   fontFamily: "roboto, sans-serif",
   textDecoration: "none",
   textTransform: "uppercase",
-  fontSize: 17,
+  fontSize: 18,
   color: "#222",
+  "&:hover": {
+    borderBottom: "2px solid #1976D2",
+  },
+  "&:nth-child(4)": {
+    borderBottom: "none",
+    transform: "scale(1.1)",
+    display: "flex",
+    justifyContent: "center",
+    color: "#1976D2",
+    gap: 5,
+  },
 });
 
 export const UserAvatar = styled("img")({
-  width: 48,
-  height: 48,
-  marginLeft: 18,
+  width: 50,
+  height: 50,
+  marginLeft: 20,
   borderRadius: "100%",
   border: "2px solid #1976D2",
 });

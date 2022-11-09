@@ -12,4 +12,8 @@ export interface ProductCartDescription {
     image: string;
     price: number;
     description?: string;
+    rating?: {
+      count: number;
+      rate: number;
+    }
   }  

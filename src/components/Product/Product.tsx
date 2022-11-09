@@ -56,7 +56,7 @@ export const Product: React.FC<ProductCardProps> = ({
           variant="contained"
           onClick={onAddToCartClick}
         >
-          Add to cart
+          Add no carrinho
         </Button>
       </Footer>
     </CardWrapper>

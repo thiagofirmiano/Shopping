@@ -2,7 +2,7 @@ import React from "react";
 import {HeaderWrapper,NavBar,NavLink,UserAvatar,} from "./Header.styles";
 import ShoppingCart from "assets/icons/ShoppingCart.svg";
 import { CreateContexts } from "contexts";
-import { PagesConstantsRoutes } from "pages/contants/routes";
+import { PagesConstantsRoutes } from "pages/contants/routes"; 
 
 
 export const Header: React.FC = () => {

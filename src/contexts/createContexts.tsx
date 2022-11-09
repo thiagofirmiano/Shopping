@@ -8,7 +8,10 @@ interface CartContextDescription {
   getProduct: (id: number) => ProductGetDescription  | undefined;
   getItemsQuantity: () => number;
   addToCart: (product: ProductGetDescription) => void;
-   
+  removeCart: (id: number) => void;
+  aumentarCart: (id: number) => void;
+  diminuirCart: (id: number) => void;
+  Total: () => number; 
 }
 
 interface CartProviderProps {
@@ -30,7 +33,7 @@ const addToCart = (product: ProductGetDescription) => {
   cartList.push({
     id: product.id,
     title: product.title,
-    image: product.image,
+    image: product.image, 
     price: product.price,
     count: 1,
   });
@@ -38,6 +41,28 @@ const addToCart = (product: ProductGetDescription) => {
 };
   const getItemsQuantity = () =>
     cart.reduce((total, product) => total + product.count, 0); 
+    const Total = () =>
+    cart.reduce((total, product) => total + product.count * product.price, 0);
+  const aumentarCart = (id: number) => {
+    const cartList = cart.map(product => {
+      if (product.id === id) product.count += 1;
+
+      return product;
+    });
+    setCart(cartList);
+  };
+  const diminuirCart = (id: number) => {
+    const cartList = cart.map(product => {
+      if (product.id === id && product.count > 1) product.count -= 1;
+
+      return product;
+    });
+    setCart(cartList);
+  };
+  const removeCart = (id: number) => {
+    const cartList = cart.filter(product => product.id !== id);
+    setCart(cartList);
+  };
     
   return (
     <CreateContexts.Provider value={{
@@ -47,6 +72,10 @@ const addToCart = (product: ProductGetDescription) => {
       getProduct,
       getItemsQuantity,
       addToCart,
+      removeCart,
+      aumentarCart,
+      diminuirCart,
+      Total,
     
     }}>
       {children}
