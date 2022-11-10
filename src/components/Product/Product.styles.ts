@@ -24,7 +24,7 @@ export const Image = styled("img")({
   height: 160,
   width: 165,
   cursor: "pointer",
-});
+}); 
 
 export const Title = styled(Typography)({
   fontSize: 18,

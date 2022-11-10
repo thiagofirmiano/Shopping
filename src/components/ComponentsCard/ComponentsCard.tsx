@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material";
 import { ProductCartDescription  } from "utils/auxiliaryFunction";
 import React from "react";
-import {CardWrapper,DeleteIcon,Description,Image,Price,ProductActions,ProductData,Title,Units,} from "./ComponentsCard.styles";
+import {CardWrapper,DeleteIcon,Description,Image,Price,ButtonAlt,ProductData,Title,Units,} from "./ComponentsCard.styles";
 import TrashCan from "assets/icons/TrashCan.svg";
 import { CreateContexts } from "contexts";
 import { useNavigate } from "react-router-dom";
@@ -41,19 +41,17 @@ export const ComponentsCard : React.FC<ProductCartDescription > = ({
           </Description>
         </Box>
       </ProductData>
-      <ProductActions>
+      <ButtonAlt>
         <Box>
-          <Button onClick={UpButtonClick}>
-          </Button>
-          <Button onClick={DownButtonClick}>
-          </Button>
+          <Button onClick={UpButtonClick} className={"Most"}>+</Button>
+          <Button onClick={DownButtonClick}className={"AnyLess"}>-</Button>
         </Box>
         <DeleteIcon 
           onClick={DeleteButtonClick}
           src={TrashCan}
           alt="Trash can icon"
         />
-      </ProductActions>
+      </ButtonAlt>
     </CardWrapper>
   );
 };

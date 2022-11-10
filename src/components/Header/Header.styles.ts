@@ -1,13 +1,13 @@
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
-export const HeaderWrapper = styled("header")({
+export const TopoHeader = styled("header")({
   width: "100%",
-  height: 100,
+  height: 100, 
   backgroundColor: "#FFF",
-  padding: "0 50px",
   display: "flex",
   justifyContent: "space-between",
+  alignItems:"center",
   position: "fixed",
   left: 0,
   top: 0,
@@ -46,7 +46,7 @@ export const HeaderWrapper = styled("header")({
   },
 });
 
-export const NavBar = styled("nav")({
+export const Bar = styled("nav")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -72,7 +72,7 @@ export const NavLink = styled(Link)({
   },
 });
 
-export const UserAvatar = styled("img")({
+export const Avatar = styled("img")({
   width: 50,
   height: 50,
   marginLeft: 20,

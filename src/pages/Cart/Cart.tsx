@@ -17,7 +17,7 @@ export const Cart: React.FC = () => {
           <Products>
             {cart?.map(product => ( 
               <ComponentsCard 
-                key={product.id}
+                key={product.id} 
                 id={product.id}
                 title={product.title}
                 image={product.image}

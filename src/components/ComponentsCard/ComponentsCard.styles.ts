@@ -2,8 +2,8 @@ import { Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const CardWrapper = styled("div")({
-  height: 90,
-  borderRadius: 5,
+  height: 100,
+  borderRadius: 5, 
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
@@ -14,18 +14,18 @@ export const ProductData = styled("div")({
   display: "flex",
   alignItems: "center",
   padding: "0 10px",
-  gap: 9,
+  gap: 10,
 });
 
 export const Image = styled("img")({
-  height: 58,
-  width: 58,
+  height: 60,
+  width: 60,
   cursor: "pointer",
 });
 
 export const Title = styled(Typography)({
-  fontSize: 17,
-  fontWeight: 600,
+  fontSize: 18,
+  fontWeight: 700,
   cursor: "pointer",
   transition: "all .2s",
   "&:hover": {
@@ -60,7 +60,7 @@ export const Units = styled(Typography)({
 
 export const Price = styled(Typography)({
   fontStyle: "italic",
-  fontWeight: 400,
+  fontWeight: 500,
   "@media only screen and (max-width: 840px)": {
     "&": {
       fontSize: 12,
@@ -68,15 +68,16 @@ export const Price = styled(Typography)({
   },
 });
 
-export const ProductActions = styled("div")({
+export const ButtonAlt = styled("div")({
   display: "flex",
   alignItems: "center",
-  gap: 9,
-  paddingRight: 9,
+  gap: 10,
+  paddingRight: 10,
   "& > div": {
+    marginRight: 10,
+    alignItems: "center",
     display: "flex",
     flexDirection: "column",
-    marginRight: 15,
   },
 });
 
