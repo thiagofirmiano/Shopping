@@ -24,7 +24,7 @@ export const ComponentsCard : React.FC<ProductCartDescription > = ({
   const DeleteButtonClick = () =>
     removeCart(id);
   const ProductItemClick = () =>
-    navigate(`/products/${id}`);
+    navigate(`/product-Description/${id}`);
     
 
   return (
