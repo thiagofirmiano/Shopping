@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
   return (
     <TopoHeader>
      <Link to="/"> 
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" /> 
       </Link>
       <Bar>
         <NavLink to={PagesConstantsRoutes.productListing}>Products</NavLink>

@@ -8,7 +8,7 @@ export const OnDescriptionWrapper = styled("div")({
   borderRadius: 5,
   "@media only screen and (max-width: 660px)": {
     "&": {
-      width: "80vw",
+      width: "80vw", 
     },
   },
 });

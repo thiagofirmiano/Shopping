@@ -5,7 +5,7 @@ import {CardWrapper,DeleteIcon,Description,Image,Price,ButtonAlt,ProductData,Tit
 import TrashCan from "assets/icons/TrashCan.svg";
 import { CreateContexts } from "contexts";
 import { useNavigate } from "react-router-dom";
-
+ 
 
 export const ComponentsCard : React.FC<ProductCartDescription > = ({
   id,
