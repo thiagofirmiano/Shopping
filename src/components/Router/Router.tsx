@@ -4,6 +4,8 @@ import { PagesConstantsRoutes } from "pages/contants";
 import { ProductListing } from "pages/ProductListing";
 import { Cart } from "pages/Cart";
 import { ProductDescription } from "pages/ProductDescription";
+import { Login } from "pages/Login";
+import { Register } from "pages/Register"
 
 
 export const Router: React.FC = () => (
@@ -15,6 +17,8 @@ export const Router: React.FC = () => (
         path={PagesConstantsRoutes.productDescription}
         element={<ProductDescription />}
       />
+      <Route path= {PagesConstantsRoutes.login} element={<Login />} />
+      <Route path= {PagesConstantsRoutes.register} element={<Register />} />
     </Routes>
   </BrowserRouter>
 );

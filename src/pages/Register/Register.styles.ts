@@ -1,6 +1,5 @@
 import { Box, Button as Btn } from "@mui/material";
 import { styled } from "@mui/system";
-import fireLogo from "assets/img/fireLogo.svg";
 import { Link } from "react-router-dom";
 
 export const LoginWrapper = styled(Box)({
@@ -21,7 +20,7 @@ export const LoginContainer = styled(Box)({
   marginTop: "4em",
   padding: "2em 6em",
   gap: "1.5em",
-  backgroundImage: `url(${fireLogo})`,
+  
   "& > svg": {
     color: "#C71D1D",
   },

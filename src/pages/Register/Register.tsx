@@ -7,7 +7,7 @@ import {Button,LinkRegister,LoginContainer,LoginWrapper} from "./Register.styles
 import {validatePassword,validateEmail} from "utils/ValidatePassword";
 import { UserContext } from "contexts";
 import { useNavigate } from "react-router-dom";
-import { AlternativeLogins } from "components/LoginsOption";
+import { LoginsOption } from "components/LoginsOption/LoginsOption";
 import { ValidPasswordRules } from "components/ValidPasswordRules/ValidPasswordRules";
 
 export const Register: React.FC = () => {
@@ -105,7 +105,7 @@ export const Register: React.FC = () => {
             Register
           </Button>
 
-          <AlternativeLogins message="register" />
+          <LoginsOption message="register" />
         </LoginContainer>
         <Typography>
           Already have an account?{" "}

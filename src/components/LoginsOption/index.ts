@@ -1,1 +1,1 @@
-export { AlternativeLogins } from "./LoginsOption";
+export { LoginsOption } from "./LoginsOption";

@@ -4,7 +4,7 @@ import { LoginWrapper, LoginContainer, Button, LinkRegister } from "./Login.styl
 import { Typography } from '@mui/material';
 import { UserContext } from "contexts";
 import { useNavigate } from "react-router-dom";
-import { AlternativeLogins } from "components/LoginsOption";
+import { LoginsOption } from "components/LoginsOption/LoginsOption";
 import { Input } from "components/Input/Input";
 import { PagesConstantsRoutes } from "pages/contants";
  
@@ -45,7 +45,7 @@ export const Login: React.FC = () => {
         />
          <Button onClick={onLoginButtonClick}>Login</Button>
          
-         <AlternativeLogins message="login" />
+         <LoginsOption message="login" />
       </LoginContainer>
       <Typography>
         Are you new here? <LinkRegister to = {PagesConstantsRoutes.register}>Create an account</LinkRegister>
