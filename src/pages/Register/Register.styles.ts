@@ -41,7 +41,7 @@ export const Button = styled(Btn)({
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  background: "#89D963",
+  background: "#FFFF00",
   flexGrow: 0,
   height: "51px",
   width: "80%",

@@ -4,5 +4,5 @@ export enum PagesConstantsRoutes {
   cart = "/cart",
   products = "products",
   login = "/login",
-  register = "/register",  
+  register = "/register",   
 } 

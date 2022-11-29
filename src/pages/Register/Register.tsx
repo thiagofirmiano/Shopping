@@ -47,7 +47,7 @@ export const Register: React.FC = () => {
       <LoginWrapper>
         <LoginContainer>
           <Input
-            label="Email"
+            label="Email:"
             onChange={onInputEmailChange}
             value={inputEmail}
             id="email"
@@ -56,25 +56,25 @@ export const Register: React.FC = () => {
             colorHelp="red"
           />
           <Input
-            label="Name"
+            label="Name:"
             onChange={onInputNameChange}
             value={inputName}
             id="name"
             type="text"
           />
           <Input
-            label="Password"
+            label="Password:"
             onChange={onInputPasswordChange}
             value={inputPassword}
             id="password"
             type="password"
             helpText={
-              (passwordValid || inputPassword === "") ? "" : "invalid password"
+              (passwordValid || inputPassword === "") ? "" : "password inválida"
             }
             colorHelp="red"
           />
           <Input
-            label="Confirm Password"
+            label="Confirm Password:"
             onChange={onInputConfirmPasswordChange}
             value={inputConfirmPassword}
             id="password"
@@ -83,8 +83,8 @@ export const Register: React.FC = () => {
               inputConfirmPassword === ""
                 ? ""
                 : passwordMatch
-                ? "passwords match"
-                : "passwords don't match"
+                ? "Palavras-chave correspondem"
+                : "as senhas não correspondem"
             }
             colorHelp={passwordMatch ? "green" : "red"}
           />
@@ -108,7 +108,7 @@ export const Register: React.FC = () => {
           <LoginsOption message="register" />
         </LoginContainer>
         <Typography>
-          Already have an account?{" "}
+        Já tem uma conta?{" "}
           <LinkRegister to={PagesConstantsRoutes.login}>Login</LinkRegister>
         </Typography>
       </LoginWrapper>

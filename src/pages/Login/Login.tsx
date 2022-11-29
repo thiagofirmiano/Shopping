@@ -30,14 +30,14 @@ export const Login: React.FC = () => {
     <LoginWrapper>
       <LoginContainer>
         <Input 
-          label="Email"
+          label="Email:"
           onChange={onInputEmailChange}
           value={inputEmail}
           id="email"
           type="email"
         />
         <Input 
-          label="Password"
+          label="Password:"
           onChange={onInputPasswordChange}
           value={inputPassword}
           id="password"
@@ -48,7 +48,7 @@ export const Login: React.FC = () => {
          <LoginsOption message="login" />
       </LoginContainer>
       <Typography>
-        Are you new here? <LinkRegister to = {PagesConstantsRoutes.register}>Create an account</LinkRegister>
+        Novo registro?<LinkRegister to = {PagesConstantsRoutes.register}>Crie a sua conta</LinkRegister>
       </Typography>
     </LoginWrapper>
     <Footer />

@@ -33,12 +33,12 @@ export const ValidPasswordRules: React.FC<ValidPasswordRulesProps> = ({
   
   return (
     <HelpPasswordContainer>
-      <Typography>Password's Rules</Typography>
+      <Typography>Regras de senha</Typography>
       <List>
         <ListItem disablePadding className={specialChar ? "right" : "wrong"}>
           <ListItemIcon className={specialChar ? "right" : "wrong"}>
           </ListItemIcon>
-          <ListItemText primary="At least one special character" />
+          <ListItemText primary="Pelo menos um caractere especial" />
         </ListItem>
 
         <ListItem
@@ -47,7 +47,7 @@ export const ValidPasswordRules: React.FC<ValidPasswordRulesProps> = ({
         >
           <ListItemIcon className={length ? "right" : "wrong"}>
           </ListItemIcon>
-          <ListItemText primary="Between 8 and 16 characters" />
+          <ListItemText primary="Entre 8 e 16 caracteres" />
         </ListItem>
 
         <ListItem
@@ -62,7 +62,7 @@ export const ValidPasswordRules: React.FC<ValidPasswordRulesProps> = ({
             }
           >
           </ListItemIcon>
-          <ListItemText primary="contain uppercase, lowercase and numbers" />
+          <ListItemText primary="Conter letras maiúsculas, minúsculas e números" />
         </ListItem>
 
         <ListItem
@@ -77,7 +77,7 @@ export const ValidPasswordRules: React.FC<ValidPasswordRulesProps> = ({
             }
           >
           </ListItemIcon>
-          <ListItemText primary="Cannot have sequence of numbers" />
+          <ListItemText primary="Não pode ter sequência de números" />
         </ListItem>
 
         <ListItem
@@ -92,7 +92,7 @@ export const ValidPasswordRules: React.FC<ValidPasswordRulesProps> = ({
             }
           >
           </ListItemIcon>
-          <ListItemText primary="Cannot have sequence of letters" />
+          <ListItemText primary="Não pode ter sequência de letras" />
         </ListItem>
       </List>
     </HelpPasswordContainer>

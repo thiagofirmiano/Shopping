@@ -8,11 +8,11 @@ interface LoginsOptionProps {
 
 export const LoginsOption: React.FC<LoginsOptionProps> = ({message}) => {
     const onButtonClick = () => {
-        alert(`${message} with another account`);
+        alert(`${message} com outra conta`);
     };
   return (
     <LinksAnotherLogin>
-      <Typography>{`Or ${message} with`}:</Typography>
+      <Typography>{`Ou faça o ${message} com`}:</Typography>
       <LinkLoginWrapper>
         <ButtonIcon onClick={onButtonClick}>  
         </ButtonIcon>
