@@ -88,7 +88,6 @@ export const Register: React.FC = () => {
             }
             colorHelp={passwordMatch ? "green" : "red"}
           />
- y
           <ValidPasswordRules password = {inputPassword}/>
 
           <Button

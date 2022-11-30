@@ -6,20 +6,21 @@ export const LoginWrapper = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  margin: "auto",
+  width: "100%",
+  
 });
 
 export const LoginContainer = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",
   width: "100%",
   minWidth: "80vw", 
+  display: "flex",
   background: "#FFFFFF",
   borderRadius: "5px",
   marginTop: "4em",
   padding: "4em 12em",
   gap: "1.5em",
+  alignItems: "center",
+  flexDirection: "column",
   
   "& > svg": {
     color: "#C71D1D",
@@ -55,7 +56,7 @@ export const Button = styled(Btn)({
     color: "#F0F0F0",
     background: "#82CF5D",
     cursor: "pointer",
-  },
+  }, 
 });
 export const LinkRegister = styled(Link)({
   color: "#C71D1D",

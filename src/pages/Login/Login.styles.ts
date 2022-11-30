@@ -7,6 +7,7 @@ export const LoginWrapper = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   margin: "auto",
+  width: "100%",
 });
 
 export const LoginContainer = styled(Box)({
