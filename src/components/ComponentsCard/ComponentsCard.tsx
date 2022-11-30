@@ -11,7 +11,7 @@ export const ComponentsCard : React.FC<ProductCartDescription > = ({
   id,
   title,
   image,
-  price,
+  price, 
   count,
 }) => {
   const navigate = useNavigate();

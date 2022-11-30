@@ -14,11 +14,11 @@ export const LoginContainer = styled(Box)({
   alignItems: "center",
   flexDirection: "column",
   width: "100%",
-  minWidth: "60vw",
+  minWidth: "80vw", 
   background: "#FFFFFF",
   borderRadius: "5px",
   marginTop: "4em",
-  padding: "2em 6em",
+  padding: "4em 12em",
   gap: "1.5em",
   
   "& > svg": {
@@ -31,7 +31,6 @@ export const LoginContainer = styled(Box)({
     marginTop: "70px",
     minWidth: "70vw",
     padding: "2em 1em",
-    width: "90vw",
   },
 });
 

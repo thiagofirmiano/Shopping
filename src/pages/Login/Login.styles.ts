@@ -24,7 +24,6 @@ export const LoginContainer = styled(Box)({
   },
   "@media (min-width: 0px) and (max-width: 380px)": {
     padding: "3em 1em",
-    width: "90vw",
   },
 });
 

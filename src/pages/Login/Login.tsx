@@ -51,7 +51,7 @@ export const Login: React.FC = () => {
         Novo registro?<LinkRegister to = {PagesConstantsRoutes.register}>Crie a sua conta</LinkRegister>
       </Typography>
     </LoginWrapper>
-    <Footer />
+    <Footer /> 
    </React.Fragment>
   );
 };
