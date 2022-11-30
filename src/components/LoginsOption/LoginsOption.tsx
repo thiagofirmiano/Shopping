@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { ButtonIcon, LinkLoginWrapper, LinksAnotherLogin } from "./LoginsOption.styles";
+import { ButtonIcon, LinkWrapper, LinksLogin } from "./LoginsOption.styles";
 
 interface LoginsOptionProps {
     message: "login" | "register";
@@ -11,16 +11,16 @@ export const LoginsOption: React.FC<LoginsOptionProps> = ({message}) => {
         alert(`${message} com outra conta`);
     };
   return (
-    <LinksAnotherLogin>
+    <LinksLogin>
       <Typography>{`Ou faça o ${message} com`}:</Typography>
-      <LinkLoginWrapper>
-        <ButtonIcon onClick={onButtonClick}>  
-        </ButtonIcon>
-        <ButtonIcon onClick={onButtonClick}>   
+      <LinkWrapper>
+        <ButtonIcon onClick={onButtonClick}>          
         </ButtonIcon>
         <ButtonIcon onClick={onButtonClick}>
         </ButtonIcon>
-      </LinkLoginWrapper>
-    </LinksAnotherLogin>
+        <ButtonIcon onClick={onButtonClick}>
+        </ButtonIcon>
+      </LinkWrapper>
+    </LinksLogin>
   );
 };

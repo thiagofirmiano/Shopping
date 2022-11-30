@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, IconButton } from "@mui/material";
 
-export const LinksAnotherLogin = styled(Box)({
+export const LinksLogin = styled(Box)({
     display: "flex",
     flexDirection: "column",
     "& p": {
@@ -9,7 +9,7 @@ export const LinksAnotherLogin = styled(Box)({
         fontWeight: 600,
     },
 });
-export const LinkLoginWrapper = styled(Box)({
+export const LinkWrapper = styled(Box)({
     display: "flex",
     justifyContent: "space-between",
 });
