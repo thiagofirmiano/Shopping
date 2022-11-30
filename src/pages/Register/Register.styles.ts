@@ -22,17 +22,6 @@ export const LoginContainer = styled(Box)({
   alignItems: "center",
   flexDirection: "column",
   
-  "& > svg": {
-    color: "#C71D1D",
-  },
-  "@media (min-width: 900px)": {
-    minWidth: "70vh",
-  },
-  "@media (min-width: 0px) and (max-width: 380px)": {
-    marginTop: "70px",
-    minWidth: "70vw",
-    padding: "2em 1em",
-  },
 });
 
 export const Button = styled(Btn)({
