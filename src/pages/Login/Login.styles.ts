@@ -7,24 +7,23 @@ export const LoginWrapper = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   margin: "auto",
-  width: "100%",
 });
 
 export const LoginContainer = styled(Box)({
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
-  width: "100%",
   background: "#FFFFFF",
   borderRadius: "5px",
-  padding: "3em 6em",
+  width:"40vw",
+  padding: "50px 0",
   gap: "2em",
 
   "& > svg": {
     color: "#C71D1D",
   },
-  "@media (min-width: 0px) and (max-width: 380px)": {
-    padding: "3em 1em",
+  "@media (min-width: 0px) and (max-width: 650px)": {
+    width: "80vw",
   },
 });
 

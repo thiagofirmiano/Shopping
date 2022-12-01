@@ -11,17 +11,21 @@ export const LoginWrapper = styled(Box)({
 });
 
 export const LoginContainer = styled(Box)({
-  width: "100%",
-  minWidth: "80vw", 
   display: "flex",
-  background: "#FFFFFF",
-  borderRadius: "5px",
-  marginTop: "4em",
-  padding: "4em 12em",
-  gap: "1.5em",
   alignItems: "center",
   flexDirection: "column",
-  
+  background: "#FFFFFF",
+  borderRadius: "5px",
+  width:"40vw",
+  padding: "50px 0",
+  gap: "2em",
+
+  "& > svg": {
+    color: "#C71D1D",
+  },
+  "@media (min-width: 0px) and (max-width: 650px)": {
+    width: "80vw",
+  },
 });
 
 export const Button = styled(Btn)({
